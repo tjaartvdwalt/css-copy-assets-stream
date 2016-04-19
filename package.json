@@ -1,6 +1,6 @@
 {
   "name": "css-copy-assets-stream",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "parcelify transform that copies assets defined in css files",
   "main": "index.js",
   "directories": {
