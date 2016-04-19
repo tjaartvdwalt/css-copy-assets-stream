@@ -1,0 +1,32 @@
+{
+  "name": "css-copy-assets-stream",
+  "version": "0.1.0",
+  "description": "parcelify transform that copies assets defined in css files",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "test": "tape test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjaartvdwalt/css-copy-assets-stream.git"
+  },
+  "keywords": [
+    "parcelify",
+    "css"
+  ],
+  "author": "Tjaart van der Walt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjaartvdwalt/css-copy-assets-stream/issues"
+  },
+  "homepage": "https://github.com/tjaartvdwalt/css-copy-assets-stream#readme",
+  "dependencies": {
+    "copy": "^0.2.0",
+    "css-url-parser": "^1.0.0",
+    "through": "^2.3.8"
+  }
+}
