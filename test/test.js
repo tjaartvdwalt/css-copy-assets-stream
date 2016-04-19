@@ -5,5 +5,5 @@ var path = require('path')
 var inputFile = path.join(__dirname, 'sample.css')
 
 fs.createReadStream(inputFile)
-  .pipe(cssStream(inputFile, {output: 'output'}))
+  .pipe(cssStream(inputFile, {output: 'output/mydir/'}))
   .pipe(process.stdout)
