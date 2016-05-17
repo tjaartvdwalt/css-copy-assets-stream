@@ -21,9 +21,17 @@ module.exports = function (file, opts) {
       if (opts && opts.output) { output = opts.output }
       var cssUrls = parseCssUrls(data)
       for (var i in cssUrls) {
-        shelljs.mkdir('-p', path.dirname(path.join(output, cssUrls[i])))
-        shelljs.rm('-f', path.join(output, cssUrls[i]))
-        shelljs.cp('-f', path.resolve(path.dirname(file), cssUrls[i]), path.join(output, cssUrls[i]))
+        console.log(cssUrls[i])
+        // If the filename has additional properties we should remove those
+        var filename = cssUrls[i]
+        var filenameRegex = cssUrls[i].match('(.*)\\?')
+        if (filenameRegex) {
+          filename = filenameRegex[1]
+        }
+
+        shelljs.mkdir('-p', path.dirname(path.join(output, filename)))
+        shelljs.rm('-f', path.join(output, filename))
+        shelljs.cp('-f', path.resolve(path.dirname(file), filename), path.join(output, filename))
       }
       this.queue(data)
     } catch (err) {
