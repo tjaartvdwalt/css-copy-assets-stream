@@ -21,7 +21,6 @@ module.exports = function (file, opts) {
       if (opts && opts.output) { output = opts.output }
       var cssUrls = parseCssUrls(data)
       for (var i in cssUrls) {
-        console.log(cssUrls[i])
         // If the filename has additional properties we should remove those
         var filename = cssUrls[i]
         var filenameRegex = cssUrls[i].match('(.*)\\?')
